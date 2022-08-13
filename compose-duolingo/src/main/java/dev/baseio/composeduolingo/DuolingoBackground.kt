@@ -72,7 +72,7 @@ fun DuolingoSurface(
       )
       .clickable(
         interactionSource = interactionSource,
-        indication = rememberRipple(),
+        indication = null,
         enabled = enabled,
         role = Role.Button,
         onClick = onClick
@@ -107,7 +107,7 @@ fun DuolingoSurface(
       .selectable(
         selected = selected,
         interactionSource = interactionSource,
-        indication = rememberRipple(),
+        indication = null,
         enabled = enabled,
         role = Role.Tab,
         onClick = onClick
@@ -143,7 +143,7 @@ fun DuolingoSurface(
       .toggleable(
         value = checked,
         interactionSource = interactionSource,
-        indication = rememberRipple(),
+        indication = null,
         enabled = enabled,
         role = Role.Switch,
         onValueChange = onCheckedChange
