@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dev.baseio.composeduolingo.DuolingoBackground
+import dev.baseio.composeduolingo.DuolingoSurface
 
 @Composable
 fun DuolingoButton(
@@ -23,15 +24,10 @@ fun DuolingoButton(
   contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
   content: @Composable RowScope.() -> Unit
 ) {
-  DuolingoBackground(
+  DuolingoSurface(
     onClick = onClick,
     modifier = modifier,
     enabled = enabled,
-    shape = shape,
-    color = colors.backgroundColor(enabled).value,
-    contentColor = contentColor.copy(alpha = 1f),
-    border = border,
-    elevation = elevation?.elevation(enabled, interactionSource)?.value ?: 0.dp,
     interactionSource = interactionSource,
   ){
     Row(
