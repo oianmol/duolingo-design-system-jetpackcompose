@@ -17,22 +17,22 @@ import dev.baseio.composeduolingo.DuolingoTheme
 
 @Composable
 fun DuolingoText(
-  text: String,
-  modifier: Modifier = Modifier,
-  color: Color = DuolingoTheme.colors.textColor,
-  fontSize: TextUnit = TextUnit.Unspecified,
-  fontStyle: FontStyle? = null,
-  fontWeight: FontWeight? = null,
-  fontFamily: FontFamily? = null,
-  letterSpacing: TextUnit = TextUnit.Unspecified,
-  textDecoration: TextDecoration? = null,
-  textAlign: TextAlign? = null,
-  lineHeight: TextUnit = TextUnit.Unspecified,
-  overflow: TextOverflow = TextOverflow.Clip,
-  softWrap: Boolean = true,
-  maxLines: Int = Int.MAX_VALUE,
-  onTextLayout: (TextLayoutResult) -> Unit = {},
-  style: TextStyle
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = DuolingoTheme.duolingoColors.contentColor,
+    fontSize: TextUnit = TextUnit.Unspecified,
+    fontStyle: FontStyle? = null,
+    fontWeight: FontWeight? = null,
+    fontFamily: FontFamily? = null,
+    letterSpacing: TextUnit = TextUnit.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+    style: TextStyle
 ) {
   val mergedStyle = style.merge(
     TextStyle(

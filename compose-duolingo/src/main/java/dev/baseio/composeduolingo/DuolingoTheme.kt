@@ -7,14 +7,14 @@ import androidx.compose.runtime.remember
 
 @Composable
 fun DuolingoTheme(
-  colors: Colors = DuolingoTheme.colors,
+  duolingoColors: DuolingoColors = DuolingoTheme.duolingoColors,
   content: @Composable () -> Unit
 ) {
   val rememberedColors = remember {
     // Explicitly creating a new object here so we don't mutate the initial [colors]
     // provided, and overwrite the values set in it.
-    colors.copy()
-  }.apply { updateColorsFrom(colors) }
+    duolingoColors.copy()
+  }.apply { updateColorsFrom(duolingoColors) }
   CompositionLocalProvider(
     LocalColors provides rememberedColors,
   ) {
@@ -23,7 +23,7 @@ fun DuolingoTheme(
 }
 
 object DuolingoTheme {
-  val colors: Colors
+  val duolingoColors: DuolingoColors
     @Composable
     @ReadOnlyComposable
     get() = LocalColors.current
