@@ -9,28 +9,32 @@ import androidx.compose.ui.graphics.Color
 
 class Colors(
   background: Color,
+  textColor: Color,
   isLight: Boolean
 ) {
   var background by mutableStateOf(background, structuralEqualityPolicy())
+    internal set
+  var textColor by mutableStateOf(textColor, structuralEqualityPolicy())
     internal set
   var isLight by mutableStateOf(isLight, structuralEqualityPolicy())
     internal set
 
   fun copy(
     background: Color = this.background,
+    textColor: Color = this.textColor,
     isLight: Boolean = this.isLight
   ): Colors = Colors(
-    background, isLight
+    background, textColor, isLight
   )
 
   override fun toString(): String {
     return "Colors(" +
-      "background=$background,isLight=$isLight)"
+      "background=$background,textColor=$textColor,isLight=$isLight)"
   }
 }
 
-fun lightColors() = Colors(isLight = true, background = Color.White)
-fun darkColors() = Colors(isLight = false, background = Color.Black)
+fun lightColors() = Colors(isLight = true, textColor = Color.Black, background = Color.White)
+fun darkColors() = Colors(isLight = false, textColor = Color.White, background = Color.Black)
 
 internal fun Colors.updateColorsFrom(other: Colors) {
   background = other.background
