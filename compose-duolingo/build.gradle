@@ -37,7 +37,6 @@ android {
 
 dependencies {
   implementation 'androidx.core:core-ktx:1.8.0'
-  implementation("androidx.compose.foundation:foundation:1.2.0")
-  implementation("androidx.compose.foundation:foundation-layout:1.2.0")
-  implementation("androidx.compose.foundation:foundation-text:1.0.0-alpha07")
+  implementation("androidx.compose.foundation:foundation:1.2.1")
+  implementation("androidx.compose.foundation:foundation-layout:1.2.1")
 }
