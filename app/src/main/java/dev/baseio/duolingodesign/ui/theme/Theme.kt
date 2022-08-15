@@ -3,8 +3,7 @@ package dev.baseio.duolingodesign.ui.theme
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion
-import dev.baseio.composeduolingo.Colors
+import dev.baseio.composeduolingo.DuolingoColors
 import dev.baseio.composeduolingo.DuolingoTheme
 
 @Composable
@@ -19,10 +18,10 @@ fun DuolingoComposeUITheme(
   }
 
   DuolingoTheme(
-    colors = colors,
+    duolingoColors = colors,
     content = content
   )
 }
 
-val DarkColorPalette = Colors(background = Color.Black, false)
-val LightColorPalette = Colors(background = Color.White, false)
+val DarkColorPalette = DuolingoColors(background = Color.Black, isLight = false, contentColor = Color.White)
+val LightColorPalette = DuolingoColors(background = Color.White, isLight = false, contentColor = Color.Black)

@@ -46,7 +46,7 @@ android {
 }
 
 dependencies {
-  implementation implementation(project(':compose-duolingo',))
+  implementation (project(':compose-duolingo',))
   implementation 'androidx.core:core-ktx:1.8.0'
   implementation "androidx.compose.ui:ui:$compose_version"
   implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"

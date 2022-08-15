@@ -1,16 +1,15 @@
 package dev.baseio.composeduolingo.primitives
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.defaultMinSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.baseio.composeduolingo.DuolingoSurface
 
@@ -19,6 +18,9 @@ fun DuolingoButton(
   onClick: () -> Unit,
   modifier: Modifier = Modifier,
   enabled: Boolean = true,
+  elevation: Dp,
+  border: BorderStroke? = null,
+  shape: Shape = RectangleShape,
   interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
   contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
   content: @Composable RowScope.() -> Unit
@@ -27,6 +29,9 @@ fun DuolingoButton(
     onClick = onClick,
     modifier = modifier,
     enabled = enabled,
+    border = border,
+    shape = shape,
+    elevation = elevation,
     interactionSource = interactionSource,
   ){
     Row(
